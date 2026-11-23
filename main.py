@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""news-image-20261123 entry program.
+
+Copies the repository's entry.png to the output directory make.fun grades.
+Standard library only; no network.
+"""
+
+import hashlib
+import os
+import shutil
+import sys
+from pathlib import Path
+
+SOURCE_NAME = "entry.png"
+MAX_BYTES = 1_048_576
+
+
+def _png_dimensions(data: bytes) -> tuple[int, int]:
+    """Return (width, height) from a PNG's IHDR chunk, or raise."""
+    if len(data) < 33 or data[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError("entry.png is not a PNG file")
+    if data[12:16] != b"IHDR":
+        raise ValueError("entry.png has no IHDR chunk")
+    width = int.from_bytes(data[16:20], "big")
+    height = int.from_bytes(data[20:24], "big")
+    return width, height
+
+
+def _png_has_iend(data: bytes) -> bool:
+    """True when the PNG ends with a complete IEND chunk (whole image)."""
+    return len(data) >= 12 and data[-12:-8] == b"\x00\x00\x00\x00" \
+        and data[-8:-4] == b"IEND"
+
+
+def main() -> int:
+    repo_root = Path(__file__).resolve().parent
+    source = repo_root / SOURCE_NAME
+    out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    target = out_dir / SOURCE_NAME
+
+    data = source.read_bytes()
+    if len(data) > MAX_BYTES:
+        print(f"entry.png is {len(data)} bytes, over the 1 MiB limit",
+              file=sys.stderr)
+        return 1
+    width, height = _png_dimensions(data)
+    if width > 1024 or height > 1024:
+        print(f"entry.png is {width}x{height}, over the 1024x1024 limit",
+              file=sys.stderr)
+        return 1
+    if not _png_has_iend(data):
+        print("entry.png is truncated: no IEND chunk at the end",
+              file=sys.stderr)
+        return 1
+
+    shutil.copyfile(source, target)
+    copied = target.read_bytes()
+    if hashlib.sha256(copied).hexdigest() != hashlib.sha256(data).hexdigest():
+        print("copied entry.png does not match the source", file=sys.stderr)
+        return 1
+    print(f"wrote {target} ({len(copied)} bytes, {width}x{height}, "
+          f"sha256 {hashlib.sha256(copied).hexdigest()})")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
