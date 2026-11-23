@@ -52,6 +52,35 @@ def _png_iend_crc_ok(data: bytes) -> bool:
     return stored == computed
 
 
+def _png_chunks_ok(data: bytes) -> bool:
+    """Walk every chunk; require valid lengths/CRCs, >=1 IDAT, exact end.
+
+    The IHDR/IEND checks above only look at the two ends. A file can pass
+    them while carrying a corrupt IDAT chunk or a chunk whose declared
+    length runs past the end. This walk rejects those: each chunk's length
+    must stay inside the file, each stored CRC must match, at least one
+    IDAT chunk must exist, and the walk must land exactly on the file end
+    right after IEND (no trailing bytes).
+    """
+    pos = 8
+    seen_idat = False
+    while pos + 8 <= len(data):
+        length = int.from_bytes(data[pos:pos + 4], "big")
+        ctype = data[pos + 4:pos + 8]
+        end = pos + 12 + length
+        if end > len(data):
+            return False
+        stored = int.from_bytes(data[end - 4:end], "big")
+        if zlib.crc32(data[pos + 4:end - 4]) & 0xFFFFFFFF != stored:
+            return False
+        if ctype == b"IDAT":
+            seen_idat = True
+        if ctype == b"IEND":
+            return seen_idat and end == len(data)
+        pos = end
+    return False
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parent
     source = repo_root / SOURCE_NAME
@@ -80,6 +109,10 @@ def main() -> int:
     if not _png_iend_crc_ok(data):
         print("entry.png has a corrupt IEND chunk (CRC mismatch)",
               file=sys.stderr)
+        return 1
+    if not _png_chunks_ok(data):
+        print("entry.png has malformed chunks (bad length/CRC, no IDAT, "
+              "or trailing bytes)", file=sys.stderr)
         return 1
 
     shutil.copyfile(source, target)
