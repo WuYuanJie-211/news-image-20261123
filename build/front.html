@@ -21,18 +21,17 @@
   .dateband .dek { font-family:"DejaVu Serif",serif; font-style:italic; font-size:15px; color:#c0392b; margin-top:2px; }
   .dateband .sub { font-size:10px; letter-spacing:2.5px; color:#666; margin-top:5px; }
   /* 3 UTC 160-224 */
-  .utc { top:160px; height:64px; border-top:1px solid #ccc; padding-top:4px; }
-  .utc .uh { font-size:10px; font-weight:700; letter-spacing:2px; }
-  .utc .uh span { color:#c0392b; }
-  .utc .uh .hl { background:#c0392b; color:#fff; padding:0 2px; }
+  .utc { top:160px; height:54px; border-top:1px solid #ccc; padding-top:4px; }
+  .utc .uh { font-size:9px; font-weight:700; letter-spacing:0.12em; color:#111111; }
+  .utc .uh .hl { background:#B3261E; color:#fff; padding:0 3px; }
   .utc .cols { display:flex; margin-top:3px; }
   .utc .col { flex:1; padding:0 8px; border-left:1px solid #ddd; }
   .utc .col:first-child { border-left:none; padding-left:0; }
-  .utc .t { font-size:11px; font-weight:700; color:#c0392b; }
+  .utc .t { font-size:8px; font-weight:700; color:#c0392b; }
   .utc .e { font-size:10.5px; line-height:12.5px; color:#333; margin-top:1px; }
   /* 4 heroes 224-404 */
-  .heroes { top:224px; height:180px; display:flex; gap:14px; }
-  .hero { width:320px; height:180px; border:1px solid #bbb; background:#fff; position:relative; overflow:hidden; }
+  .heroes { top:214px; height:170px; display:flex; gap:14px; }
+  .hero { width:320px; height:170px; border:1px solid #bbb; background:#fff; position:relative; overflow:hidden; }
   .hero .art { width:320px; height:76px; overflow:hidden; }
   .hero .art svg { display:block; }
   .hero .banner { height:15px; background:#c0392b; color:#fff; font-size:9.5px; font-weight:700; letter-spacing:1px; line-height:15px; padding-left:8px; display:flex; justify-content:space-between; align-items:center; }
@@ -43,7 +42,7 @@
   .hero .src .badge { font-weight:700; color:#c0392b; }
   .hero .src .badge.rep { color:#c98a1b; }
   /* 5 numbers 404-486 */
-  .numbers { top:404px; height:82px; border-top:2px solid #161616; border-bottom:2px solid #161616; padding-top:3px; }
+  .numbers { top:384px; height:82px; border-top:2px solid #161616; border-bottom:2px solid #161616; padding-top:3px; }
   .numbers .nh { font-size:10px; font-weight:700; letter-spacing:2px; text-align:center; }
   .numbers .nh span { color:#c0392b; }
   .numbers .nrow { display:flex; margin-top:1px; }
@@ -51,49 +50,50 @@
   .numbers .ncell .v { font-size:52px; font-weight:700; color:#c0392b; line-height:52px; }
   .numbers .ncell .l { font-size:9px; letter-spacing:0.8px; color:#444; line-height:10px; margin-top:1px; }
   /* 6 regions 486-516 */
-  .regions { top:486px; height:30px; display:flex; }
+  .regions { top:466px; height:30px; display:flex; }
   .regions .cell { flex:1; text-align:center; border-right:1px solid #ccc; padding-top:2px; }
   .regions .cell:last-child { border-right:none; }
   .regions .cell .n { font-size:14px; font-weight:700; color:#c0392b; line-height:14px; }
   .regions .cell .r { font-size:9px; letter-spacing:1px; color:#333; line-height:10px; }
   /* 7 cards 516-800 */
-  .cardsband { top:516px; height:284px; }
+  .cardsband { top:496px; height:278px; }
   .cardsband .ch { height:16px; display:flex; justify-content:space-between; align-items:baseline; border-bottom:2px solid #161616; }
   .cardsband .ch .t { font-size:11px; font-weight:700; letter-spacing:2px; }
   .cardsband .ch .n { font-size:9px; letter-spacing:1px; color:#666; }
-  .grid { display:grid; grid-template-columns:188px 188px 188px 188px 188px; grid-template-rows:124px 124px; gap:12px; margin-top:6px; }
+  .grid { display:grid; grid-template-columns:188px 188px 188px 188px 188px; grid-template-rows:124px 124px; gap:8px; margin-top:4px; }
   .card { position:relative; border:1px solid #ddd; border-top:3px solid #B3261E; background:#fff; overflow:hidden; }
   .card .art { width:188px; height:74px; overflow:hidden; }
   .card .art svg { display:block; }
   .card .num { position:absolute; top:5px; left:6px; font-size:9px; line-height:11px; color:#6B6B6B; background:#faf7f0; padding:1px 3px; z-index:3; }
   .card .ban { font-size:8.5px; font-weight:700; letter-spacing:0.8px; color:#c0392b; padding:0 6px; line-height:12px; height:12px; }
   .card h3 { font-family:"DejaVu Serif",serif; font-size:12px; font-weight:700; line-height:14px; height:14px; padding:0 6px; white-space:nowrap; }
-  .card .dek { font-size:9px; line-height:10px; height:10px; color:#444; padding:0 6px; white-space:nowrap; overflow:hidden; }
-  .card .src { font-size:7px; letter-spacing:0.5px; color:#888; padding:0 6px; line-height:10px; height:10px; display:flex; justify-content:space-between; }
-  .card .src .fbadge { font-size:9px; font-weight:700; letter-spacing:0.08em; }
+  .card .dek { font-size:8px; line-height:10px; height:10px; color:#444; padding:0 6px; white-space:nowrap; overflow:hidden; }
+  .card .src { font-size:7px; letter-spacing:0; color:#888; padding:0 3px; line-height:10px; height:10px; display:flex; justify-content:space-between; }
+  .card .src .ssrc { max-width:calc(100% - 70px); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+  .card .src .fbadge { flex:0 0 70px; text-align:right; font-size:9px; font-weight:700; letter-spacing:0.08em; }
   .card .src .fbadge.v { color:#111111; }
   .card .src .fbadge.r { color:#B3261E; }
   /* 8 map + also 800-942 */
-  .mapband { top:800px; height:142px; display:flex; gap:12px; }
-  .map { width:430px; height:142px; background:#0e1a2b; position:relative; overflow:hidden; }
+  .mapband { top:774px; height:132px; display:flex; gap:12px; }
+  .map { width:430px; height:132px; background:#0e1a2b; position:relative; overflow:hidden; }
   .map .maptitle { position:absolute; left:10px; top:7px; color:#fff; font-size:11px; font-weight:700; letter-spacing:2px; z-index:3; }
   .map .mapnote { position:absolute; left:10px; bottom:6px; color:#9fb3cc; font-size:8px; z-index:3; }
   .map svg { position:absolute; left:0; top:0; }
-  .also { width:546px; height:142px; background:#fff; border:1px solid #bbb; padding:6px 10px 0 10px; }
+  .also { width:546px; height:132px; background:#fff; border:1px solid #bbb; padding:6px 10px 0 10px; }
   .also .ah { font-size:12px; font-weight:700; letter-spacing:1.5px; }
   .also .ah span { color:#c0392b; }
   .also .ai { font-size:10px; line-height:14.5px; color:#333; margin-top:1px; white-space:nowrap; overflow:hidden; }
   .also .ai b { color:#c0392b; }
   .also .ai .asrc { font-size:8px; color:#888; letter-spacing:0.5px; }
-  .also .ai .bdg { font-weight:700; color:#c0392b; }
+  .also .ai .bdg { font-size:8px; font-weight:700; color:#c0392b; }
   .also .ai .bdg.rep { color:#c98a1b; }
   /* 9 how checked 942-956 */
-  .checked { top:942px; height:14px; border-top:1px solid #ccc; font-size:8px; letter-spacing:0.04em; color:#333; text-align:center; line-height:14px; }
+  .checked { top:906px; height:28px; border-top:1px solid #ccc; font-size:9px; letter-spacing:0.04em; color:#333; text-align:center; line-height:1.5; }
   .checked b { color:#111; }
   .checked .v { color:#c0392b; font-weight:700; }
   .checked .r { color:#c98a1b; font-weight:700; }
   /* 10 date check 956-1024 */
-  .datecheck { top:956px; height:68px; background:#c0392b; color:#fff; padding:5px 12px 6px 12px; }
+  .datecheck { top:946px; height:70px; background:#c0392b; color:#fff; padding:5px 12px 6px 12px; }
   .datecheck .t { font-size:11px; font-weight:700; letter-spacing:1.5px; }
   .datecheck .cols { display:flex; gap:20px; margin-top:2px; }
   .datecheck .col { flex:1; font-size:10px; line-height:12px; }
@@ -117,14 +117,14 @@
 </div>
 
 <div class="band utc">
-  <div class="uh">THE DAY IN UTC <span>&mdash; <span class="hl">22&ndash;23 Nov</span>EMBER UNFOLDED</span></div>
+  <div class="uh">THE DAY IN UTC &mdash; HOW <span class="hl">22&ndash;23 NOVEMBER</span> UNFOLDED</div>
   <div class="cols">
     <div class="col"><div class="t">22 NOV 01:00 UTC</div><div class="e">COP31 ends in Antalya: no deal, no fossil-fuel mention</div></div>
-    <div class="col"><div class="t">04:00 UTC</div><div class="e">IRGC claims missiles and drones hit a US base in Bahrain</div></div>
-    <div class="col"><div class="t">05:00 UTC</div><div class="e">Bahrain says a civilian site was hit; 2 injured</div></div>
-    <div class="col"><div class="t">09:00 UTC</div><div class="e">Nepal PM Shah holds talks with PM Modi in Delhi</div></div>
     <div class="col"><div class="t">22 NOV 13:00 UTC</div><div class="e">Drone hits a five-storey block in Dymer; 14 missing</div></div>
-    <div class="col"><div class="t">18:00 UTC</div><div class="e">Coalition claims a Houthi missile over Riyadh downed</div></div>
+    <div class="col"><div class="t">23 NOV 04:00 UTC</div><div class="e">IRGC claims missiles and drones hit a US base in Bahrain</div></div>
+    <div class="col"><div class="t">23 NOV 05:00 UTC</div><div class="e">Bahrain says a civilian site was hit; 2 injured</div></div>
+    <div class="col"><div class="t">23 NOV 09:00 UTC</div><div class="e">Nepal PM Shah holds talks with PM Modi in Delhi</div></div>
+    <div class="col"><div class="t">23 NOV 18:00 UTC</div><div class="e">Coalition claims a Houthi missile over Riyadh downed</div></div>
   </div>
 </div>
 
@@ -177,7 +177,7 @@
       <path d="M258,20 Q272,6 286,20" fill="none" stroke="#ffffff" stroke-width="2"/>
       <circle cx="272" cy="14" r="3" fill="#c98a1b"/>
     </svg></div>
-    <div class="banner">IRAN CLAIMS STRIKE ON US BASE</div>
+    <div class="banner"><span style="font-size:8px">IRAN: CLAIMED STRIKES</span><span class="br">THE GULF</span></div>
     <h2>IRAN CLAIMS BAHRAIN HIT</h2>
     <div class="dek">IRGC claims two US Patriot radars destroyed; Bahrain says a civilian site was hit, 2 injured. Two tankers struck; coalition claims a Houthi missile down.</div>
     <div class="src"><span>#02 &middot; BAHRAIN / THE GULF &middot; REUTERS / AP</span><span class="badge rep">&#9684; REPORTED</span></div>
@@ -207,7 +207,7 @@
     <div class="banner">AT LEAST 14 MISSING</div>
     <h2>DRONE HITS DYMER FLATS</h2>
     <div class="dek">A Russian drone strikes a five-storey block in Dymer, north of Kyiv; at least 14 people missing as rescuers search the rubble.</div>
-    <div class="src"><span>#03 &middot; DYMER, UKRAINE &middot; ONE TURN / JAGRANJOSH</span><span class="badge">&#10003; VERIFIED</span></div>
+    <div class="src"><span>#03 &middot; DYMER, UKRAINE &middot; ONE TURN / JAGRANJOSH</span><span class="badge rep">&#9684; REPORTED</span></div>
   </div>
 </div>
 
@@ -248,7 +248,7 @@
       <div class="ban"><span>LAW: THE HAGUE</span></div>
       <h3>ICJ: MYANMAR GUILTY</h3>
       <div class="dek">First state found guilty of genocide.</div>
-      <div class="src"><span>#04 &middot; THE HAGUE &middot; HRW / AP / BBC</span><span class="fbadge v">&#10003; VERIFIED</span></div>
+      <div class="src"><span class="ssrc">#04 &middot; HRW / AP</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -265,7 +265,7 @@
       <div class="ban"><span>SUMMIT: SHENZHEN</span></div>
       <h3>TRUMP, XI, PUTIN MEET</h3>
       <div class="dek">First trilateral summit; no arms deal.</div>
-      <div class="src"><span>#05 &middot; SHENZHEN &middot; RFE/RL / HELSINKI</span><span class="fbadge v">&#10003; VERIFIED</span></div>
+      <div class="src"><span class="ssrc">#05 &middot; RFE/RL / HELSINKI TIMES</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -277,7 +277,7 @@
       <div class="ban"><span>MARKETS: NEW YORK</span></div>
       <h3>STOCKS IN CORRECTION</h3>
       <div class="dek">S&amp;P &minus;3.7%, Nasdaq &minus;5.3% in AI rout.</div>
-      <div class="src"><span>#06 &middot; NEW YORK &middot; AP</span><span class="fbadge r">&#9684; REPORTED</span></div>
+      <div class="src"><span class="ssrc">#06 &middot; AP</span><span class="fbadge r">&#9684; REPORTED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -292,7 +292,7 @@
       <div class="ban"><span>CARTELS: SINALOA</span></div>
       <h3>&#39;CHAPO ISIDRO&#39; HELD</h3>
       <div class="dek">Cartel boss seized; 11 killed in raid.</div>
-      <div class="src"><span>#07 &middot; SINALOA &middot; AP / AL JAZEERA</span><span class="fbadge v">&#10003; VERIFIED</span></div>
+      <div class="src"><span class="ssrc">#07 &middot; AP / AL JAZEERA</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -308,8 +308,8 @@
       <span class="num">08</span>
       <div class="ban"><span>QUAKE: PERU</span></div>
       <h3>PERU 6.7 QUAKE</h3>
-      <div class="dek">6.7 quake; 1 dead, 853 displaced.</div>
-      <div class="src"><span>#08 &middot; PERU &middot; AP / AFP</span><span class="fbadge v">&#10003; VERIFIED</span></div>
+      <div class="dek">1 dead, 853 displaced.</div>
+      <div class="src"><span class="ssrc">#08 &middot; AP / AFP</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -328,7 +328,7 @@
       <div class="ban"><span>SPACE: MERCURY</span></div>
       <h3>AT MERCURY, AT LAST</h3>
       <div class="dek">Two craft enter Mercury orbit.</div>
-      <div class="src"><span>#09 &middot; MERCURY &middot; ONE TURN</span><span class="fbadge r">&#9684; REPORTED</span></div>
+      <div class="src"><span class="ssrc">#09 &middot; ESA / JAXA</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -352,7 +352,7 @@
       <div class="ban"><span>FIRE: CIKANDE</span></div>
       <h3>36 MISSING IN FIRE</h3>
       <div class="dek">Candy factory burns; 3 dead, 36 missing.</div>
-      <div class="src"><span>#10 &middot; CIKANDE &middot; AP / REUTERS</span><span class="fbadge v">&#10003; VERIFIED</span></div>
+      <div class="src"><span class="ssrc">#10 &middot; AP / REUTERS</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -368,8 +368,8 @@
       <span class="num">11</span>
       <div class="ban"><span>DISASTER: NIGERIA</span></div>
       <h3>BOAT SINKS: 24 DEAD</h3>
-      <div class="dek">Mourners&rsquo; boat sinks; 24 rescued.</div>
-      <div class="src"><span>#11 &middot; NIGERIA &middot; AP</span><span class="fbadge r">&#9684; REPORTED</span></div>
+      <div class="dek">Mourners&rsquo; boat sinks; 24 dead, others missing.</div>
+      <div class="src"><span class="ssrc">#11 &middot; AP</span><span class="fbadge r">&#9684; REPORTED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -389,7 +389,7 @@
       <div class="ban"><span>SECURITY: POLAND</span></div>
       <h3>JETS OVER POLAND</h3>
       <div class="dek">Missiles, drone enter Polish airspace.</div>
-      <div class="src"><span>#12 &middot; POLAND &middot; HELSINKI TIMES</span><span class="fbadge v">&#10003; VERIFIED</span></div>
+      <div class="src"><span class="ssrc">#12 &middot; HELSINKI / SILK PARADOX</span><span class="fbadge v">&#10003; VERIFIED</span></div>
     </div>
     <div class="card">
       <div class="art"><svg width="188" height="76" viewBox="0 0 188 76">
@@ -405,7 +405,7 @@
       <div class="ban"><span>CRICKET: WELLINGTON</span></div>
       <h3>INDIA 720/9D</h3>
       <div class="dek">Record 720/9d at Basin Reserve.</div>
-      <div class="src"><span>#13 &middot; WELLINGTON &middot; OBSERVERVOICE</span><span class="fbadge r">&#9684; REPORTED</span></div>
+      <div class="src"><span class="ssrc">#13 &middot; OBSERVERVOICE</span><span class="fbadge r">&#9684; REPORTED</span></div>
     </div>
   </div>
 </div>
@@ -413,7 +413,7 @@
 <div class="band mapband">
   <div class="map">
     <div class="maptitle">WHERE IT HAPPENED</div>
-    <svg width="430" height="142" viewBox="0 0 430 142">
+    <svg width="430" height="132" viewBox="0 0 430 142" preserveAspectRatio="none">
       <g fill="#1d3a5f">
         <polygon points="18,28 52,18 88,16 108,26 104,40 84,44 78,58 66,52 52,56 40,48 22,44"/>
         <polygon points="108,8 122,10 120,18 106,16"/>
@@ -425,37 +425,37 @@
         <polygon points="392,124 404,122 406,130 394,132"/>
       </g>
       <g font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="8" font-weight="700" fill="#ffffff">
-        <g><circle cx="232" cy="40" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="232" y="42.5" text-anchor="middle">1</text><text x="241" y="37">1 &middot; ANTALYA</text></g>
+        <g><circle cx="232" cy="40" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="232" y="42.5" text-anchor="middle">1</text><text x="246" y="50" text-anchor="end">1 &middot; ANTALYA</text></g>
         <g><circle cx="258" cy="52" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="258" y="54.5" text-anchor="middle">2</text><text x="267" y="49">2 &middot; BAHRAIN</text></g>
-        <g><circle cx="222" cy="28" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="222" y="30.5" text-anchor="middle">3</text><text x="204" y="16">3 &middot; DYMER</text></g>
+        <g><circle cx="222" cy="28" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="222" y="30.5" text-anchor="middle">3</text><text x="222" y="18" text-anchor="middle">3 &middot; DYMER</text></g>
         <g><circle cx="52" cy="52" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="52" y="54.5" text-anchor="middle">7</text><text x="61" y="49">7 &middot; SINALOA</text></g>
         <g><circle cx="210" cy="78" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="210" y="80.5" text-anchor="middle">11</text><text x="219" y="75">11 &middot; NIGERIA</text></g>
         <g><circle cx="392" cy="128" r="7" fill="#c0392b" stroke="#ffffff" stroke-width="1"/><text x="392" y="130.5" text-anchor="middle">13</text><text x="400" y="117" text-anchor="end">13 &middot; WELLINGTON</text></g>
       </g>
     </svg>
-    <div class="mapnote">&#9679; = STORY LOCATION &middot; NUMBER = HERO OR CARD</div>
+    <div class="mapnote">&#9679; = STORY LOCATION &middot; NUMBER = STORY &middot; SIX OF 20 PLOTTED</div>
   </div>
   <div class="also">
     <div class="ah">ALSO ON <span>23 NOVEMBER</span> &mdash; SEVEN MORE STORIES</div>
-    <div class="ai"><b>14</b> Ukraine talks: US wants a deal by early Jan; Kyiv wants written guarantees. <span class="asrc">&middot; FT</span> <span class="bdg">&#10003;</span></div>
-    <div class="ai"><b>15</b> Kryvyi Rih: missile kills a boy, 7, and a woman, 20; 60 wounded. <span class="asrc">&middot; AP</span> <span class="bdg">&#10003;</span></div>
-    <div class="ai"><b>16</b> Nepal PM Shah holds bilateral talks with PM Modi in Delhi. <span class="asrc">&middot; OBSERVERVOICE</span> <span class="bdg rep">&#9684;</span></div>
-    <div class="ai"><b>17</b> EU&ndash;Indonesia deal: tariffs scrapped on up to 98.5% of goods. <span class="asrc">&middot; AFP</span> <span class="bdg rep">&#9684;</span></div>
-    <div class="ai"><b>18</b> Denmark expels Russia&rsquo;s defence attach&eacute; over an alleged plot. <span class="asrc">&middot; REUTERS</span> <span class="bdg">&#10003;</span></div>
-    <div class="ai"><b>19</b> UK&ndash;EU reset deal: food trade, carbon, youth mobility agreed. <span class="asrc">&middot; HELSINKI TIMES</span> <span class="bdg rep">&#9684;</span></div>
-    <div class="ai"><b>20</b> Kyiv proposes local ceasefires for evacuations in Kherson. <span class="asrc">&middot; ISW</span> <span class="bdg">&#10003;</span></div>
+    <div class="ai"><b>14</b> Ukraine talks: US wants a deal by early Jan; Kyiv wants written guarantees. <span class="asrc">&middot; FT</span> <span class="bdg">&#10003; VER</span></div>
+    <div class="ai"><b>15</b> Kryvyi Rih: missile kills a boy, 7, and a woman, 20; 60 wounded. <span class="asrc">&middot; AP</span> <span class="bdg">&#10003; VER</span></div>
+    <div class="ai"><b>16</b> Nepal PM Shah holds bilateral talks with PM Modi in Delhi. <span class="asrc">&middot; OBSERVERVOICE</span> <span class="bdg rep">&#9684; REP</span></div>
+    <div class="ai"><b>17</b> EU&ndash;Indonesia deal: tariffs scrapped on up to 98.5% of goods. <span class="asrc">&middot; AFP</span> <span class="bdg rep">&#9684; REP</span></div>
+    <div class="ai"><b>18</b> Denmark expels Russia&rsquo;s defence attach&eacute; over an alleged plot. <span class="asrc">&middot; REUTERS</span> <span class="bdg">&#10003; VER</span></div>
+    <div class="ai"><b>19</b> UK&ndash;EU reset deal: food trade, carbon, youth mobility agreed. <span class="asrc">&middot; HELSINKI TIMES</span> <span class="bdg rep">&#9684; REP</span></div>
+    <div class="ai"><b>20</b> Kyiv proposes local ceasefires for evacuations in Kherson. <span class="asrc">&middot; ISW</span> <span class="bdg">&#10003; VER</span></div>
   </div>
 </div>
 
-<div class="band checked"><b>HOW WE CHECKED:</b> <span class="v">&#10003; VERIFIED</span> &mdash; TWO OR MORE SOURCES &nbsp;&middot;&nbsp; <span class="r">&#9684; REPORTED</span> &mdash; SINGLE SOURCE OR CLAIM &nbsp;&middot;&nbsp; INCLUDED ONLY IF THERE WAS A DEVELOPMENT ON 23 NOV &nbsp;&middot;&nbsp; EVERY STORY CARRIES A DATE</div>
+<div class="band checked"><b>HOW WE CHECKED:</b> <span class="v">&#10003; VERIFIED</span> &mdash; TWO OR MORE NAMED OUTLETS &nbsp;&middot;&nbsp; <span class="r">&#9684; REPORTED</span> &mdash; SINGLE SOURCE OR CLAIM<br>INCLUDED IF THE EVENT, OR A NEW DEVELOPMENT IN IT, FELL ON 22&ndash;23 NOV &nbsp;&middot;&nbsp; EVERY STORY CARRIES A SOURCE AND A BADGE.</div>
 
 <div class="band datecheck">
   <div class="t">DATE CHECK &mdash; MONDAY 23 NOVEMBER 2026</div>
   <div class="cols">
-    <div class="col"><b>LEFT OUT &mdash; NOT 23 NOV:</b> Krakow shooting (7 Nov) &middot; Tempi trial (2023 crash) &middot; Bolsonaro in ICU &mdash; no 23 Nov update.</div>
+    <div class="col"><b>LEFT OUT &mdash; NOT 23 NOV:</b> Krakow shooting (7 Nov) &middot; Tempi trial (2023 crash) &middot; Bolsonaro in ICU (admitted 20 Nov) &mdash; no 23 Nov update.</div>
     <div class="col"><b>NOT YET:</b> Ukraine deal (target: early Jan) &middot; Kerch Bridge repairs (est. Mar 2027) &middot; NATO Poland meeting (Mon 30 Nov).</div>
   </div>
-  <div class="foot">Heroes 1 &amp; 3 happened Sun 22 Nov and lead the 23 Nov news cycle. COP31&rsquo;s final draft omitted the words &ldquo;fossil fuels&rdquo;.</div>
+  <div class="foot">Heroes 1 &amp; 3 happened Sun 22 Nov, inside the 22&ndash;23 Nov window, and lead the 23 Nov cycle. COP31&rsquo;s final draft omitted the words &ldquo;fossil fuels&rdquo;.</div>
 </div>
 
 </div>
